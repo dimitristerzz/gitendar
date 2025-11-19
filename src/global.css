@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: "MonaSans";
-  src: url("/fonts/MonaSans.ttf") format("truetype");
+  src: url("/MonaSans.ttf") format("truetype");
   font-weight: 200 900;
   font-style: normal;
   font-display: swap;
