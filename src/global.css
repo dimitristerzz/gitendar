@@ -6,8 +6,7 @@
   --color-background: oklch(0 0 0);
   --color-text: oklch(1 0 0);
   --height-screen-dvh: 100svh;
-  --font-text: "SF Pro", "sans-serif";
-  --font-display: "SF Pro Display", "sans-serif";
+  --font-monasans: "MonaSans", "sans-serif";
 }
 
 @view-transition {
@@ -23,6 +22,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@font-face {
+  font-family: "MonaSans";
+  src: url("/fonts/MonaSans.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 .animate {
@@ -46,7 +53,7 @@
 
 html {
   background-color: var(--color-background);
-  font-family: var(--font-text);
+  font-family: var(--font-monasans);
 }
 
 * {
