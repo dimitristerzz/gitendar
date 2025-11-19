@@ -1,16 +1,98 @@
 ---
-
+import Layout from "../components/layout.astro";
+import ChristmasIcon from "../components/assets/christmasIcon.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Gitendar"
+  description="Embrace the unexpected and share your musical journey with GrooveShare"
+>
+  <div
+    class="h-screen-dvh flex flex-col items-center justify-center relative px-4 overflow-hidden animate"
+    style="animation-delay: 0.0s;"
+  >
+    <ChristmasIcon class="absolute h-16 sm:h-22 md:h-28 lg:h-34 xl:h-40" />
+
+    <p
+      class="font-display text-gradient font-bold text-[3rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] xl:text-[9rem] text-center"
+    >
+      SO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON
+    </p>
+  </div>
+</Layout>
+
+<!-- ---
+import Layout from "../components/layout.astro";
+import Arrow from "../components/assets/arrow.astro";
+import ChristmasIcon from "../components/assets/christmasIcon.astro";
+---
+
+<Layout
+  title="GrooveShare: Your Daily Groove Companion"
+  description="Embrace the unexpected and share your musical journey with GrooveShare"
+>
+  <div class="flex flex-row justify-between items-center mx-80 h-screen-dvh">
+    <div class="flex flex-col items-start justify-center gap-12">
+      <div
+        class="flex flex-col items-start justify-center gap-8 animate-fade-down text-center"
+        style="animation-delay: 0s;"
+      >
+        <ChristmasIcon class="w-50 h-auto" />
+
+        <div class="flex flex-wrap justify-center gap-12 text-xl text-text">
+          <a
+            class="flex flex-row items-center gap-2 text-lg transition-transform duration-200 transform hover:scale-105 hover:text-red"
+            href={`/tos/`}
+          >
+            <Arrow />
+            terms of service
+          </a>
+          <a
+            class="flex flex-row items-center gap-2 text-lg transition-transform duration-200 transform hover:scale-105 hover:text-red"
+            href={`/privacy/`}
+          >
+            <Arrow />
+            privacy policy
+          </a>
+          <a
+            class="flex flex-row items-center gap-2 text-lg transition-transform duration-200 transform hover:scale-105 hover:text-red"
+            href={`/contact/`}
+          >
+            <Arrow />
+            contact us
+          </a>
+        </div>
+      </div>
+
+      <div class="animate-fade-down" style="animation-delay: 0.2s;">
+        <a
+          href="https://www.apple.com/app-store/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex flex-row items-center justify-center bg-red text-background px-14 py-3 rounded-2xl hover:bg-white hover:text-background transition cursor-pointer gap-4 overflow-hidden relative text-xl"
+        >
+          Download NOW
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon-arrow"
+          >
+            <g clip-path="url(#clip0_100_170)">
+              <path
+                d="M11.33 1.875C11.33 1.14048 10.7345 0.545035 10 0.545035C9.26548 0.545035 8.67003 1.14048 8.67003 1.875L10 1.875L11.33 1.875ZM9.05957 19.0654C9.57896 19.5848 10.421 19.5848 10.9404 19.0654L19.4043 10.6016C19.9237 10.0822 19.9237 9.24011 19.4043 8.72073C18.8849 8.20134 18.0428 8.20134 17.5234 8.72073L10 16.2441L2.47658 8.72073C1.9572 8.20134 1.11511 8.20134 0.595727 8.72073C0.0763429 9.24011 0.0763429 10.0822 0.595727 10.6016L9.05957 19.0654ZM10 1.875L8.67003 1.875L8.67004 18.125L10 18.125L11.33 18.125L11.33 1.875L10 1.875Z"
+                fill="currentColor"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_100_170">
+                <rect width="20" height="20" fill="currentColor"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout> -->
