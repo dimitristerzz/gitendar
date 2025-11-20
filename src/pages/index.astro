@@ -7,23 +7,29 @@ import HeatMap from "../components/assets/heatmap.astro";
 
 <Layout title="Gitendar" description="Calendar made fun">
   <div
-    class="h-screen-dvh flex flex-col items-center justify-center px-200 py-100 animate gap-10"
+    class="h-screen-dvh flex flex-col items-center justify-center px-200 py-100 gap-10"
   >
-    <div class="flex flex-row justify-between">
+    <div
+      class="animate flex flex-row justify-between"
+      style="animation-delay: 0.1s"
+    >
       <a href="/" class="flex flex-row items-center gap-4">
         <TextTextIcon class="h-14 w-auto" />
       </a>
 
       <a
-        href=""
-        class="animate font-medium flex flex-row items-center justify-center px-4 py-4 rounded-2xl bg-green5 text-green2 hover:bg-green2 hover:text-green5 transition cursor-pointer gap-2 text-nowrap"
+        href="https://accounts.google.com/o/oauth2/v2/auth?client_id=264564390212-egbsl9mauf57jaglhvanhcvv0er7rhq2.apps.googleusercontent.com&redirect_uri=https://dimitristerzz.github.io/gitendar&response_type=code&scope=https://www.googleapis.com/auth/calendar.readonly&access_type=offline&prompt=consent"
+        class="font-medium flex flex-row items-center justify-center px-4 py-4 rounded-2xl bg-green5 text-green2 hover:bg-green2 hover:text-green5 transition cursor-pointer gap-2 text-nowrap"
       >
         <GoogleIcon class="h-6 w-auto" />
         Sign Up
       </a>
     </div>
 
-    <h1 class="font-medium text-white text-6xl text-nowrap">Calendar made <span class="text-green5 font-bold">FUN</span></h1>
+    <h1 class="font-medium text-white text-6xl text-nowrap">
+      Calendar made <span class="text-green5 font-bold">FUN</span>
+    </h1>
+
     <HeatMap />
   </div>
 </Layout>
