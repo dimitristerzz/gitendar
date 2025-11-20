@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "./fonts.css";
 
 @theme {
   --color-primary: oklch(0.7948 0.1702 153.98);
