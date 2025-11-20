@@ -1,53 +1,29 @@
 ---
 import GoogleIcon from "../components/assets/googleIcon.astro";
-import Icon from "../components/assets/icon.astro";
-import TextIcon from "../components/assets/textIcon.astro";
+import TextTextIcon from "../components/assets/textIconIcon.astro";
 import Layout from "../components/layout.astro";
+import HeatMap from "../components/assets/heatmap.astro";
 ---
 
 <Layout title="Gitendar" description="Calendar made fun">
   <div
-    class="h-screen-dvh flex flex-row items-start justify-between px-200 py-100 animate"
+    class="h-screen-dvh flex flex-col items-center justify-center px-200 py-100 animate gap-10"
   >
-    <a href="/" class="flex flex-row items-center">
-      <Icon class="h-16" />
-      <TextIcon class="h-36" />
-    </a>
+    <div class="flex flex-row justify-between">
+      <a href="/" class="flex flex-row items-center gap-4">
+        <TextTextIcon class="h-14 w-auto" />
+      </a>
 
-    <a
-      href="auth"
-      class="animate group font-medium flex flex-row items-center justify-center bg-[#56D364] text-[#033A16] px-4 py-2 rounded-2xl hover:bg-[#033A16] hover:text-[#56D364] transition cursor-pointer gap-4 text-xl"
-    >
-      <GoogleIcon class="h-8" />
-      Sign Up
-    </a>
-
-    <div class="inline-flex flex-col justify-start items-start gap-6">
-      <div class="inline-flex justify-start items-center gap-6">
-        <div class="w-[60px] h-[60px] bg-[#56d364] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#2ea043] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#2ea043] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#56d364] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#56d364] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#2ea043] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#56d364] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#56d364] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#2ea043] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-      </div>
-      <div class="inline-flex justify-start items-center gap-6">
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#196c2e] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#033a16] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#196c2e] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#033a16] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#151b23] rounded-md"></div>
-        <div class="w-[60px] h-[60px] bg-[#196c2e] rounded-md"></div>
-      </div>
+      <a
+        href=""
+        class="animate font-medium flex flex-row items-center justify-center px-4 py-4 rounded-2xl bg-green5 text-green2 hover:bg-green2 hover:text-green5 transition cursor-pointer gap-2 text-nowrap"
+      >
+        <GoogleIcon class="h-6 w-auto" />
+        Sign Up
+      </a>
     </div>
+
+    <h1 class="font-medium text-white text-6xl text-nowrap">Calendar made <span class="text-green5 font-bold">FUN</span></h1>
+    <HeatMap />
   </div>
 </Layout>
