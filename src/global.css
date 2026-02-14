@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: "MonaSans";
-  src: url("/MonaSans.ttf") format("truetype");
+  src: url("/MonaSans.woff2") format("woff2");
   font-weight: 200 900;
   font-style: normal;
   font-display: swap;
