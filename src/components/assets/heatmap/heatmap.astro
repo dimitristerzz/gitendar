@@ -1,3 +1,7 @@
+---
+
+---
+
 <div class="inline-flex flex-col justify-start items-start gap-6">
   <div class="inline-flex justify-start items-center gap-6">
     <div class="w-14 h-14 rounded-md color-square bg-green5"></div>
@@ -76,38 +80,35 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const squares = document.querySelectorAll(".color-square");
-    const colors = [
-      "bg-green1",
-      "bg-green2",
-      "bg-green3",
-      "bg-green4",
-      "bg-green5",
-    ];
+  const squares = document.querySelectorAll(".color-square");
+  const colors = [
+    "bg-green1",
+    "bg-green2",
+    "bg-green3",
+    "bg-green4",
+    "bg-green5",
+  ];
 
-    squares.forEach((square, index) => {
-      setTimeout(() => {
-        square.classList.add("fade-in");
-      }, index * 10);
-    });
-
-    function randomColor() {
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    function changeRandomSquare() {
-      const square =
-        squares[Math.floor(Math.random() * squares.length)];
-      const oldColor = [...square.classList].find((c) =>
-        c.startsWith("bg-green"),
-      );
-      if (oldColor) square.classList.remove(oldColor);
-      square.classList.add(randomColor());
-    }
-
+  squares.forEach((square, index) => {
     setTimeout(() => {
-      setInterval(changeRandomSquare, 150);
-    }, squares.length * 50);
+      square.classList.add("fade-in");
+    }, index * 10);
   });
+
+  function randomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  function changeRandomSquare() {
+    const square = squares[Math.floor(Math.random() * squares.length)];
+    const oldColor = [...square.classList].find((c) =>
+      c.startsWith("bg-green"),
+    );
+    if (oldColor) square.classList.remove(oldColor);
+    square.classList.add(randomColor());
+  }
+
+  setTimeout(() => {
+    setInterval(changeRandomSquare, 150);
+  }, squares.length * 50);
 </script>
