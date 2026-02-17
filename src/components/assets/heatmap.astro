@@ -86,9 +86,8 @@
   ];
 
   squares.forEach((square, index) => {
-    setTimeout(() => {
-      square.classList.add("fade-in");
-    }, index * 10);
+    square.style.animationDelay = `${index * 10}ms`;
+    square.classList.add("fade-in");
   });
 
   function randomColor() {
