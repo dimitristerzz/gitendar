@@ -9,7 +9,7 @@
   --color-green4: oklch(62.22% 0.166 146.22);
   --color-green5: oklch(77.17% 0.188 145.48);
   --height-screen-dvh: 100svh;
-  --font-monasans: "MonaSans", "sans-serif";
+  --font-text: "Mona Sans", "sans-serif";
 }
 
 @view-transition {
@@ -25,14 +25,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@font-face {
-  font-family: "MonaSans";
-  src: url("/MonaSans.woff2") format("woff2");
-  font-weight: 200 900;
-  font-style: normal;
-  font-display: swap;
 }
 
 .animate {
@@ -72,7 +64,7 @@
 
 html {
   background-color: var(--color-background);
-  font-family: var(--font-monasans);
+  font-family: var(--font-text);
 }
 
 * {
