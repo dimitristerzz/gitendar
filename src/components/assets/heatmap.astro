@@ -77,8 +77,6 @@
 
 <script>
   const squares = document.querySelectorAll(".color-square");
-  console.log("Total squares found:", squares.length);
-
   const colors = [
     "bg-green1",
     "bg-green2",
@@ -87,41 +85,26 @@
     "bg-green5",
   ];
 
-  // Animate fade-in on page load
   squares.forEach((square, index) => {
     setTimeout(() => {
       square.classList.add("fade-in");
-      console.log(`Fade-in added to square #${index}`);
-    }, index * 10);
+    }, index * 100);
   });
 
   function randomColor() {
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    console.log("Random color chosen:", color);
-    return color;
+    return colors[Math.floor(Math.random() * colors.length)];
   }
 
   function changeRandomSquare() {
-    const squareIndex = Math.floor(Math.random() * squares.length);
-    const square = squares[squareIndex];
+    const square = squares[Math.floor(Math.random() * squares.length)];
     const oldColor = [...square.classList].find((c) =>
       c.startsWith("bg-green"),
     );
-
-    console.log(`Changing square #${squareIndex}`, "Old color:", oldColor);
-
-    if (oldColor) {
-      square.classList.remove(oldColor);
-      console.log(`Removed old color: ${oldColor}`);
-    }
-
-    const newColor = randomColor();
-    square.classList.add(newColor);
-    console.log(`Added new color: ${newColor}`);
+    if (oldColor) square.classList.remove(oldColor);
+    square.classList.add(randomColor());
   }
 
   setTimeout(() => {
-    console.log("Starting color-changing interval...");
     setInterval(changeRandomSquare, 150);
   }, squares.length * 50);
 </script>
